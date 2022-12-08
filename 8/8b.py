@@ -6,10 +6,8 @@ def get_column(matrix, i):
 
 
 data = get_input(8).splitlines()
-forest = []
 
-for line in data:
-    forest.append([int(x) for x in line])
+forest = [[int(x) for x in line] for line in data]
 
 max_scenic = 0
 for x in range(1, len(forest) - 1):
