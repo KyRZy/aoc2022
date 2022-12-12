@@ -22,7 +22,7 @@ def move(list, direction):
                 list[i] = list[i][0], list[i][1] + (1 if list[i][1] < list[i - 1][1] else -1)
             else:
                 list[i] = list[i][0] + (1 if list[i][0] < list[i - 1][0] else -1), list[i][1] + (1 if list[i][1] < list[i - 1][1] else -1)
-    positions.add(list[len(list)-1])
+    positions.add(list[-1])
 
 
 for line in data:
