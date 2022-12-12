@@ -11,9 +11,11 @@ def findLetter(data: list[str], letter: str):
     for index, line in enumerate(data):
         if letter in line:
             return line.index(letter), index
+def get_column(matrix):
+    return [row[0] for row in matrix]
 def findAllAs(data: list[str]):
     result = []
-    for index, line in enumerate(data):
+    for index, line in enumerate(get_column(data)):
         for letter in line:
             if letter == "a":
                 result.append((line.index(letter), index))
