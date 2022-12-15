@@ -12,7 +12,6 @@ for line in data:
         beacons.add((x2, y2))
     distance = abs(x1 - x2) + abs(y1 - y2)
     distance -= abs(row - y1)
-    for x in range(x1 - distance, x1 + distance + 1):
-        empty.add((x, row))
+    empty.update((x, row) for x in range(x1 - distance, x1 + distance + 1))
 
 print(len(empty - beacons))
